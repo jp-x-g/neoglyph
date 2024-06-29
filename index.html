@@ -42,6 +42,10 @@
             text-align: center;
             margin: 0 auto;
         }
+        summary {
+            font-family: monospace;
+            font-size: 18pt;
+        }
 
     </style>
 </head>
@@ -107,55 +111,54 @@
     </div>
     -->
 
-    <table class="center table">
-        <tr>
-            <th colspan="2" style="text-align: center;">
-                Freeview pair (parallel)
-            </th>
-        </tr>
-        <tr>
-            <td>
-                <img src="cube-left.svg" class="em40">
-            </td>
-            <td>
-                <img src="cube-right.svg" class="em40">
-            </td>
-        </tr>
-    </table>
-    <table class="center table">
-        <tr>
-            <th colspan="2" style="text-align: center;">
-                Freeview pair (crossed)
-            </th>
-        </tr>
-        <tr>
-            <td>
-                <img src="cube-right.svg" class="em40">
-            </td>
-            <td>
-                <img src="cube-left.svg" class="em40">
-            </td>
-        </tr>
-    </table>
+    <details class="center">
+        <summary class="summary">
+            Freeview pair (parallel)
+        </summary>
+        <table class="center">
+            <tr>
+                <td><img src="cube-left.svg" class="em40"></td>
+                <td><img src="cube-right.svg" class="em40"></td>
+            </tr>
+        </table>
+    </details>
+    <details class="center">
+        <summary class="summary">
+            Freeview pair (crosseye)
+        </summary>
+        <table class="center">
+            <tr>
+                <td><img src="cube-right.svg" class="em40"></td>
+                <td><img src="cube-left.svg" class="em40"></td>
+            </tr>
+        </table>
+    </details>
 
-    <table class="center table">
-        <tr><td>
-            <div class="img-wrap">
-                <img src="cube-right.svg" class="em40 cyan-filter" alt="Filtered Image">
-                <div class="overlay opacity50">
-                    <img src="cube-left.svg" class="em40 red-filter" alt="Filtered Image">
-                </div>
-            </div>
-        </td></tr>
-        <tr><td>
-            <div class="img-wrap" style="margin: auto;">
-                <img src="cube-left.svg" class="em40 red-filter" alt="Filtered Image">
-                <div class="overlay opacity50">
+    <details class="center">
+        <summary class="summary">
+            Anaglyphs (overlay)
+        </summary>
+        <table class="center table">
+            <tr><td>
+                <div class="img-wrap">
                     <img src="cube-right.svg" class="em40 cyan-filter" alt="Filtered Image">
+                    <div class="overlay opacity50">
+                        <img src="cube-left.svg" class="em40 red-filter" alt="Filtered Image">
+                    </div>
                 </div>
-            </div>
-        </td></tr>
-    </table>
+            </td></tr>
+            <tr><td>
+                <div class="img-wrap" style="margin: auto;">
+                    <img src="cube-left.svg" class="em40 red-filter" alt="Filtered Image">
+                    <div class="overlay opacity50">
+                        <img src="cube-right.svg" class="em40 cyan-filter" alt="Filtered Image">
+                    </div>
+                </div>
+            </td></tr>
+        </table>
+    </details>
+
+    
     Cube image from <a href="https://commons.wikimedia.org/wiki/File:Gray_shaded_3D_cube.svg">Sarang</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC BY-SA 3.0</a>
 </body>
 </html>
