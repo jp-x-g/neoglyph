@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>test</title>
     <style>
         body {
             background-color: #000;
             color: #FFF;
             font-family: Arial, sans-serif;
+            font-size: 16pt;
         }
         .cyan-filter {
             filter: url('#remove-red');
@@ -29,6 +29,18 @@
         }
         .lighten {
             mix-blend-mode: lighten;
+        }
+        .em20 {
+            width: 20em;
+            max-width: 20em;
+        }
+        .em40 {
+            width: 40em;
+            max-width: 40em;
+        }
+        .center {
+            text-align: center;
+            margin: 0 auto;
         }
 
     </style>
@@ -95,20 +107,40 @@
     </div>
     -->
 
-    <img src="cube-right.svg">
-    <img src="cube-left.svg">
-    <div class="img-wrap">
-        <img src="cube-right.svg" class="cyan-filter" alt="Filtered Image">
-        <div class="overlay opacity50">
-            <img src="cube-left.svg" class="red-filter" alt="Filtered Image">
-        </div>
-    </div>
-    <div class="img-wrap">
-        <img src="cube-left.svg" class="red-filter" alt="Filtered Image">
-        <div class="overlay opacity50">
-            <img src="cube-right.svg" class="cyan-filter" alt="Filtered Image">
-        </div>
-    </div>
+    <table class="center table">
+        <tr>
+            <th colspan="2" style="text-align: center;">
+                Stereoscopic pair
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <img src="cube-right.svg" class="em40">
+            </td>
+            <td>
+                <img src="cube-left.svg" class="em40">
+            </td>
+        </tr>
+    </table>
+
+    <table class="center table">
+        <tr><td>
+            <div class="img-wrap">
+                <img src="cube-right.svg" class="em40 cyan-filter" alt="Filtered Image">
+                <div class="overlay opacity50">
+                    <img src="cube-left.svg" class="em40 red-filter" alt="Filtered Image">
+                </div>
+            </div>
+        </td></tr>
+        <tr><td>
+            <div class="img-wrap" style="margin: auto;">
+                <img src="cube-left.svg" class="em40 red-filter" alt="Filtered Image">
+                <div class="overlay opacity50">
+                    <img src="cube-right.svg" class="em40 cyan-filter" alt="Filtered Image">
+                </div>
+            </div>
+        </td></tr>
+    </table>
     Cube image from <a href="https://commons.wikimedia.org/wiki/File:Gray_shaded_3D_cube.svg">Sarang</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC BY-SA 3.0</a>
 </body>
 </html>
